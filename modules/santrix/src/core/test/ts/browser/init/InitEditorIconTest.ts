@@ -2,7 +2,7 @@ import { UiFinder } from '@ephox/agar';
 import { describe, it } from '@ephox/bedrock-client';
 import { SugarBody } from '@ephox/sugar';
 import { TinyHooks } from '@ephox/wrap-mcagar';
-import { getAll as getDefaultIcons } from '@tinymce/oxide-icons-default';
+import { getAll as getDefaultIcons } from '@santrix/oxide-icons-default';
 import { assert } from 'chai';
 
 import Editor from 'santrix/core/api/Editor';

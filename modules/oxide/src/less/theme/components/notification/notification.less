@@ -15,7 +15,7 @@
 
 // Yellow warning color mixes particularly bad with darker colors, hence additional checks
 @notification-warn-background-color: .bg-luma-checker(tint(@_color-warn, 80%), @background-color)[@result];
-@notification-warn-border-color: .bg-luma-checker(tint(@_color-warn, 70%), @tinymce-separator-color)[@result];
+@notification-warn-border-color: .bg-luma-checker(tint(@_color-warn, 70%), @santrix-separator-color)[@result];
 @notification-warn-text-color: .bg-luma-checker(@text-color, mix(@text-color, @_color-warn, 70%))[@result];
 @notification-warn-link-color: .bg-luma-checker(mix(@text-color, @_color-warn, 60%), @_color-warn)[@result];
 
@@ -34,6 +34,7 @@
 @_color-info: #3087eb;
 
 .tox {
+
   // Wraps around many notifications
   .tox-notifications-container {
     //

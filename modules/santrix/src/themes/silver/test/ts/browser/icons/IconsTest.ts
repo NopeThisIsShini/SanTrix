@@ -2,7 +2,7 @@ import { SimpleOrSketchSpec } from '@ephox/alloy';
 import { context, describe, it } from '@ephox/bedrock-client';
 import { Optional } from '@ephox/katamari';
 import { TinyHooks } from '@ephox/wrap-mcagar';
-import { getAll as getAllOxide } from '@tinymce/oxide-icons-default';
+import { getAll as getAllOxide } from '@santrix/oxide-icons-default';
 import { assert } from 'chai';
 
 import Editor from 'santrix/core/api/Editor';
@@ -23,17 +23,17 @@ describe('browser.santrix.themes.silver.icons.IconsTest', () => {
   const iconDefault = getAllOxide()['temporary-placeholder'];
   const myCustomIcon = '<svg></svg>';
   const myCustomRtlIcon = '<svg dir="rtl"></svg>';
-  const iconSpec = { tag: 'span', classes: [ 'tox-icon' ] };
+  const iconSpec = { tag: 'span', classes: ['tox-icon'] };
 
   const iconProvider: IconProvider = () => hook.editor().ui.registry.getAll().icons;
-  const emptyIconProvider: IconProvider = () => ({ });
+  const emptyIconProvider: IconProvider = () => ({});
   const lowerCaseProvider: IconProvider = () => ({ mycustomicon: myCustomIcon });
   const rtlProvider: IconProvider = () => ({ 'mycustomicon': myCustomIcon, 'mycustomicon-rtl': myCustomRtlIcon });
 
   const assertIconSpec = (spec: SimpleOrSketchSpec, svg: string, flip: boolean = false) => {
     assert.deepEqual(spec.dom, {
       tag: 'span',
-      classes: [ 'tox-icon' ].concat(flip ? [ 'tox-icon--flip' ] : []),
+      classes: ['tox-icon'].concat(flip ? ['tox-icon--flip'] : []),
       attributes: {},
       innerHtml: svg
     });
@@ -87,7 +87,7 @@ describe('browser.santrix.themes.silver.icons.IconsTest', () => {
     it('TINY-7782: should render with a custom icon spec', () => {
       const spec = Icons.render('indent', {
         tag: 'div',
-        classes: [ 'custom-class' ],
+        classes: ['custom-class'],
         attributes: {
           title: 'test title'
         }
@@ -95,7 +95,7 @@ describe('browser.santrix.themes.silver.icons.IconsTest', () => {
 
       assert.deepEqual(spec.dom, {
         tag: 'div',
-        classes: [ 'custom-class' ],
+        classes: ['custom-class'],
         attributes: {
           title: 'test title'
         },
@@ -116,12 +116,12 @@ describe('browser.santrix.themes.silver.icons.IconsTest', () => {
 
   context('renderFirst', () => {
     it('TINY-7782: should render the first valid icon', () => {
-      const spec = Icons.renderFirst([ 'invalid', 'indent', 'outdent' ], iconSpec, iconProvider);
+      const spec = Icons.renderFirst(['invalid', 'indent', 'outdent'], iconSpec, iconProvider);
       assertIconSpec(spec, iconIndent);
     });
 
     it('TINY-7782: should fallback to rendering the placeholder when no icons are valid', () => {
-      const spec = Icons.renderFirst([ 'invalid' ], iconSpec, iconProvider);
+      const spec = Icons.renderFirst(['invalid'], iconSpec, iconProvider);
       assertIconSpec(spec, iconDefault);
     });
   });

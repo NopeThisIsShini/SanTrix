@@ -1,5 +1,5 @@
 {
-  "name": "@tinymce/oxide-icons-default",
+  "name": "@santrix/oxide-icons-default",
   "version": "2.6.1",
   "description": "The default icon pack for SanTrix",
   "repository": {
@@ -22,7 +22,7 @@
     "README.md",
     "LICENSE.txt"
   ],
-  "author": "Ephox Corporation DBA Tiny Technologies, Inc",
+  "author": "SanTrix Team",
   "license": "MIT",
   "devDependencies": {
     "gulp": "^5.0.0",
