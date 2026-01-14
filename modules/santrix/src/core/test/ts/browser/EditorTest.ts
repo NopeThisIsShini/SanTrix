@@ -280,7 +280,7 @@ describe('browser.santrix.core.EditorTest', () => {
   it('TBA: insertContent', () => {
     const editor = hook.editor();
     editor.setContent('<p>ab</p>');
-    TinySelections.setCursor(editor, [ 0, 0 ], 1);
+    TinySelections.setCursor(editor, [0, 0], 1);
     editor.insertContent('c');
     assert.equal(editor.getContent(), '<p>acb</p>', 'insertContent');
   });
@@ -288,7 +288,7 @@ describe('browser.santrix.core.EditorTest', () => {
   it('TBA: insertContent merge', () => {
     const editor = hook.editor();
     editor.setContent('<p><strong>a</strong></p>');
-    TinySelections.setCursor(editor, [ 0, 0 ], 1);
+    TinySelections.setCursor(editor, [0, 0], 1);
     editor.insertContent('<em><strong>b</strong></em>', { merge: true });
     assert.equal(editor.getContent(), '<p><strong>a<em>b</em></strong></p>', 'insertContent merge');
   });
@@ -401,8 +401,8 @@ describe('browser.santrix.core.EditorTest', () => {
     assert.isFalse(editor.isDirty(), 'setDirty/isDirty');
 
     editor.setDirty(true);
-    assert.equal(lastArgs?.type, 'dirty', 'setDirty/isDirty');
-    assert.isTrue( editor.isDirty(), 'setDirty/isDirty');
+    assert.equal((lastArgs as unknown as EditorEvent<{}>)?.type, 'dirty', 'setDirty/isDirty');
+    assert.isTrue(editor.isDirty(), 'setDirty/isDirty');
 
     lastArgs = undefined;
     editor.setDirty(true);
@@ -449,7 +449,7 @@ describe('browser.santrix.core.EditorTest', () => {
     });
 
     assert.equal(editor.translate('input i18n'), 'output i18n', 'translate');
-    assert.equal(editor.translate([ 'value:{0}{1}', 'a', 'b' ]), 'value translation:ab', 'translate');
+    assert.equal(editor.translate(['value:{0}{1}', 'a', 'b']), 'value translation:ab', 'translate');
   });
 
   it('TBA: Treat some paragraphs as empty contents', () => {
