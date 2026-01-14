@@ -1,0 +1,13 @@
+{
+  "version": "independent",
+  "npmClient": "yarn",
+  "command":  {
+    "publish": {
+      "ignoreChanges": ["modules/santrix/**"],
+      "push": false
+    },
+    "exec": {
+      "ignore": ["*/oxide*"]
+    }
+  }
+}

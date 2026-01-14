@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SanTrix Test</title>
+    <!-- Adjust path relative to where test.html is (root of workspace) -->
+    <script src="js/santrix/santrix.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        santrix.init({
+          selector: '#editor',
+          plugins: 'accordion advlist anchor autolink autosave charmap code codesample directionality emoticons help fullscreen image importcss insertdatetime link lists media nonbreaking pagebreak preview save searchreplace table template visualblocks visualchars wordcount',
+          toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | align numlist bullist | link image | table media | lineheight outdent indent| forecolor backcolor removeformat | charmap emoticons | code | pagebreak anchor codesample | ltr rtl | fullscreen preview save | template visualblocks visualchars wordcount',
+          height: 600,
+          image_caption: true,
+          editable_class: 'mceEditable',
+          contextmenu: "link image table",
+          // Enable pagebreak behavior
+          pagebreak_separator: "<!-- pagebreak -->",
+          pagebreak_split_block: true
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>SanTrix Verification</h1>
+    <textarea id="editor">Welcome to SanTrix!</textarea>
+  </body>
+</html>

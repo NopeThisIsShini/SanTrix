@@ -1,0 +1,32 @@
+{
+  "name": "santrix",
+  "namedInputs": {
+    "santrix": [
+      "ts-globals",
+      "{projectRoot}/tsconfig.json",
+      "{projectRoot}/src/**/main/**/*.ts"
+    ]
+  },
+  "targets": {
+    "build": {
+      "inputs": [
+        "santrix",
+        "{projectRoot}/Gruntfile.js"
+      ],
+      "outputs": [
+        "{projectRoot}/dist",
+        "{projectRoot}/js",
+        "{projectRoot}/lib"
+      ]
+    },
+    "test": {
+      "inputs": [
+        "santrix",
+        "{projectRoot}/src/**/test/**/*.ts"
+      ],
+      "dependsOn": [
+        "build"
+      ]
+    }
+  }
+}
