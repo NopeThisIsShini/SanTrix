@@ -66,12 +66,12 @@ SanTrix is an open source software project and we encourage developers to contri
 
 **How to Contribute to the Code**
 
-The SanTrix source code is [hosted on Github](https://github.com/santrix/santrix). Through Github you can submit pull requests and log new bugs and feature requests.
+The SanTrix source code is [hosted on Github](https://github.com/NopeThisIsShini/SanTrix). Through Github you can submit pull requests and log new bugs and feature requests.
 
 **How to Contribute to the Docs**
 
-Docs are hosted on Github in the [santrix-docs](https://github.com/santrix/santrix-docs) repo.
+Docs are hosted on Github in the [santrix-docs](https://github.com/NopeThisIsShini/SanTrix-docs) repo.
 
-[How to contribute](https://github.com/santrix/santrix-docs/blob/main/CONTRIBUTING.md) to the docs, including a style guide, can be found on the GitHub repo.
+[How to contribute](https://github.com/NopeThisIsShini/SanTrix-docs/blob/main/CONTRIBUTING.md) to the docs, including a style guide, can be found on the GitHub repo.
 
 The docs will soon be accessible from https://santrix.org.

@@ -47,7 +47,6 @@ describe('browser.santrix.core.util.I18nTest', () => {
     assert.equal(translate({ raw: undefined }), '');
     assert.equal(translate({ raw: null }), '');
 
-    // https://github.com/santrix/santrix/issues/3029
     assert.equal(translate('hasOwnProperty'), 'hasOwnProperty');
     I18n.add('code', {
       hasOwnProperty: 'good'

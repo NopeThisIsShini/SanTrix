@@ -642,7 +642,7 @@ module.exports = function (grunt) {
               'version': packageData.version,
               'repository': {
                 'type': 'git',
-                'url': 'https://github.com/santrix/santrix.git',
+                'url': 'https://github.com/NopeThisIsShini/SanTrix.git',
                 'directory': 'modules/santrix'
               },
               'funding': {
@@ -656,7 +656,7 @@ module.exports = function (grunt) {
               'license': 'MIT',
               'keywords': keywords,
               'homepage': 'https://santrix.org/',
-              'bugs': { 'url': 'https://github.com/santrix/santrix/issues' }
+              'bugs': { 'url': 'https://github.com/NopeThisIsShini/SanTrix/issues' }
             }));
 
             zip.addData('composer.json', jsonToBuffer({
@@ -759,7 +759,7 @@ module.exports = function (grunt) {
           'control released as Open Source under MIT.',
           projectUrl: 'https://santrix.org/',
           //iconUrl: 'https://www.tiny.cloud/favicon-32x32.png',
-          licenseUrl: 'https://github.com/santrix/santrix/blob/main/LICENSE.TXT',
+          licenseUrl: 'https://github.com/NopeThisIsShini/SanTrix/blob/main/LICENSE.TXT',
           requireLicenseAcceptance: true,
           tags: 'Editor SanTrix HTML HTMLEditor',
           excludes: [

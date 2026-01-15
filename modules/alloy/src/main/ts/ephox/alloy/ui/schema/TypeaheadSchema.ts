@@ -89,7 +89,7 @@ const parts: () => PartType.PartTypeAdt[] = Fun.constant([
               // The solution is to tell screen readers which menu item is highlighted using the `aria-activedescendant` attribute.
               // TINY-9280: The aria attribute is removed when the menu is closed.
               // Since `onDehighlight` is called only when highlighting a new menu item, this will be handled in
-              // https://github.com/santrix/santrix/blob/2d8c1c034e8aa484b868a0c44605489ee0ca9cd4/modules/alloy/src/main/ts/ephox/alloy/ui/composite/TypeaheadSpec.ts#L282
+              // https://github.com/NopeThisIsShini/SanTrix/blob/2d8c1c034e8aa484b868a0c44605489ee0ca9cd4/modules/alloy/src/main/ts/ephox/alloy/ui/composite/TypeaheadSpec.ts#L282
               Attribute.getOpt(item.element, 'id').each((id) => Attribute.set(input.element, 'aria-activedescendant', id));
             });
           } else {

@@ -25,7 +25,7 @@ Install [Node.js](https://nodejs.org/en/) on your system.
 Clone this repository on your system
 
 ```
-$ git clone https://github.com/santrix/santrix.git
+$ git clone https://github.com/NopeThisIsShini/SanTrix.git
 ```
 
 ### Install dependencies

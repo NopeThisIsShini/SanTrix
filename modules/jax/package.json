@@ -4,7 +4,7 @@
   "description": "AJAX library",
   "repository": {
     "type": "git",
-    "url": "https://github.com/santrix/santrix.git",
+    "url": "https://github.com/NopeThisIsShini/SanTrix.git",
     "directory": "modules/jax"
   },
   "scripts": {
