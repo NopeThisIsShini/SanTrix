@@ -1,20 +1,20 @@
-import { Behaviour, Focusing, GuiFactory, SimpleSpec } from '@ephox/alloy';
+import { /* Behaviour, Focusing, GuiFactory, */ SimpleSpec } from '@ephox/alloy';
 
 import Editor from 'santrix/core/api/Editor';
-import I18n from 'santrix/core/api/util/I18n';
+/* import I18n from 'santrix/core/api/util/I18n'; */
 // TODO: add back when we have our own logo
 // import { Logo } from 'santrix/themes/silver/resources/StatusbarLogo';
 
 import * as Options from '../../api/Options';
 import { UiFactoryBackstageProviders } from '../../backstage/Backstage';
-import * as ConvertShortcut from '../alien/ConvertShortcut';
+/* import * as ConvertShortcut from '../alien/ConvertShortcut'; */
 import * as ElementPath from './ElementPath';
 import * as ResizeHandler from './ResizeHandle';
 import { renderWordCount } from './WordCount';
 
 const renderStatusbar = (editor: Editor, providersBackstage: UiFactoryBackstageProviders): SimpleSpec => {
 
-  const renderBranding = (): SimpleSpec => {
+/*  const renderBranding = (): SimpleSpec => {
     return {
       dom: {
         tag: 'span',
@@ -37,9 +37,9 @@ const renderStatusbar = (editor: Editor, providersBackstage: UiFactoryBackstageP
         }
       ]
     };
-  };
+  }; */
 
-  const renderHelpAccessibility = (): SimpleSpec => {
+/*  const renderHelpAccessibility = (): SimpleSpec => {
     const shortcutText = ConvertShortcut.convertText('Alt+0');
     const text = `Press {0} for help`;
     return {
@@ -51,7 +51,7 @@ const renderStatusbar = (editor: Editor, providersBackstage: UiFactoryBackstageP
         GuiFactory.text(I18n.translate([ text, shortcutText ]))
       ]
     };
-  };
+  }; */
 
   const renderRightContainer = () => {
     const components: SimpleSpec[] = [];
@@ -60,9 +60,9 @@ const renderStatusbar = (editor: Editor, providersBackstage: UiFactoryBackstageP
       components.push(renderWordCount(editor, providersBackstage));
     }
 
-    if (Options.useBranding(editor)) {
+/*    if (Options.useBranding(editor)) {
       components.push(renderBranding());
-    }
+    } */
 
     return {
       dom: {
@@ -75,9 +75,9 @@ const renderStatusbar = (editor: Editor, providersBackstage: UiFactoryBackstageP
 
   const getTextComponents = (): SimpleSpec[] => {
     const components: SimpleSpec[] = [];
-    const shouldRenderHelp = Options.useHelpAccessibility(editor);
+    const shouldRenderHelp = false; // Options.useHelpAccessibility(editor);
     const shouldRenderElementPath = Options.useElementPath(editor);
-    const shouldRenderRightContainer = Options.useBranding(editor) || editor.hasPlugin('wordcount');
+    const shouldRenderRightContainer = /* Options.useBranding(editor) || */ editor.hasPlugin('wordcount');
 
     const getTextComponentClasses = () => {
       const flexStart = 'tox-statusbar__text-container--flex-start';
@@ -105,9 +105,9 @@ const renderStatusbar = (editor: Editor, providersBackstage: UiFactoryBackstageP
       components.push(ElementPath.renderElementPath(editor, { }, providersBackstage));
     }
 
-    if (shouldRenderHelp) {
+/*    if (shouldRenderHelp) {
       components.push(renderHelpAccessibility());
-    }
+    } */
 
     if (shouldRenderRightContainer) {
       components.push(renderRightContainer());
