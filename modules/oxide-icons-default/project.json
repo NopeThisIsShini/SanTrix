@@ -1,5 +1,5 @@
 {
-  "name": "@tinymce/oxide-icons-default",
+  "name": "@santrix/oxide-icons-default",
   "targets": {
     "build": {
       "inputs": [

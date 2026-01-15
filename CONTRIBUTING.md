@@ -129,7 +129,7 @@ To add a dependency inside a monorepo package:
 This works whether adding an external dependency or a dependency on another monorepo package.
 
 Note that both names must be the entire scoped `name` of the package, not the folder, for example
-`yarn workspace @tinymce/oxide add @tinymce/oxide-icons-default`
+`yarn workspace @santrix/oxide add @santrix/oxide-icons-default`
 
 ## Publishing process
 

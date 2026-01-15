@@ -1,137 +1,370 @@
 {
   "extends": "./tsconfig.shared.json",
-
   // Compile nothing here but instead let it be compiled by the project references
   "files": [],
   "references": [
-    { "path": "modules/acid" },
-    { "path": "modules/agar" },
-    { "path": "modules/alloy" },
-    { "path": "modules/boss" },
-    { "path": "modules/boulder" },
-    { "path": "modules/bridge" },
-    { "path": "modules/darwin" },
-    { "path": "modules/dragster" },
-    { "path": "modules/katamari" },
-    { "path": "modules/katamari-assertions" },
-    { "path": "modules/mcagar" },
-    { "path": "modules/phoenix" },
-    { "path": "modules/polaris" },
-    { "path": "modules/porkbun" },
-    { "path": "modules/robin" },
-    { "path": "modules/sand" },
-    { "path": "modules/snooker" },
-    { "path": "modules/sugar" },
-    { "path": "modules/santrix" }
+    {
+      "path": "modules/acid"
+    },
+    {
+      "path": "modules/agar"
+    },
+    {
+      "path": "modules/alloy"
+    },
+    {
+      "path": "modules/boss"
+    },
+    {
+      "path": "modules/boulder"
+    },
+    {
+      "path": "modules/bridge"
+    },
+    {
+      "path": "modules/darwin"
+    },
+    {
+      "path": "modules/dragster"
+    },
+    {
+      "path": "modules/katamari"
+    },
+    {
+      "path": "modules/katamari-assertions"
+    },
+    {
+      "path": "modules/mcagar"
+    },
+    {
+      "path": "modules/phoenix"
+    },
+    {
+      "path": "modules/polaris"
+    },
+    {
+      "path": "modules/porkbun"
+    },
+    {
+      "path": "modules/robin"
+    },
+    {
+      "path": "modules/sand"
+    },
+    {
+      "path": "modules/snooker"
+    },
+    {
+      "path": "modules/sugar"
+    },
+    {
+      "path": "modules/santrix"
+    }
   ],
-
   "compilerOptions": {
     "paths": {
       // duplicate paths, copied from each individual tsconfig.json
       // once there is a webpack path plugin that supports project references this can be deleted
-      "santrix": ["modules/santrix/src/core/main/ts/api/Main"],
-      "santrix/core/*": ["modules/santrix/src/core/main/ts/*"],
-      "santrix/themes/silver/resources/*": ["modules/santrix/src/themes/silver/main/resources/*"],
-      "santrix/themes/silver/demo/*": ["modules/santrix/src/themes/silver/demo/ts/*"],
-      "santrix/themes/silver/*": ["modules/santrix/src/themes/silver/main/ts/*"],
-      "santrix/models/dom/demo/*": ["modules/santrix/src/models/dom/demo/ts/*"],
-      "santrix/models/dom/*": ["modules/santrix/src/models/dom/main/ts/*"],
-      "santrix/plugins/advlist/*": ["modules/santrix/src/plugins/advlist/main/ts/*"],
-      "santrix/plugins/accordion/*": ["modules/santrix/src/plugins/accordion/main/ts/*"],
-      "santrix/plugins/anchor/*": ["modules/santrix/src/plugins/anchor/main/ts/*"],
-      "santrix/plugins/autolink/*": ["modules/santrix/src/plugins/autolink/main/ts/*"],
-      "santrix/plugins/autoresize/*": ["modules/santrix/src/plugins/autoresize/main/ts/*"],
-      "santrix/plugins/autosave/*": ["modules/santrix/src/plugins/autosave/main/ts/*"],
-      "santrix/plugins/charmap/*": ["modules/santrix/src/plugins/charmap/main/ts/*"],
-      "santrix/plugins/code/*": ["modules/santrix/src/plugins/code/main/ts/*"],
-      "santrix/plugins/codesample/*": ["modules/santrix/src/plugins/codesample/main/ts/*"],
-      "santrix/plugins/directionality/*": ["modules/santrix/src/plugins/directionality/main/ts/*"],
-      "santrix/plugins/emoticons/*": ["modules/santrix/src/plugins/emoticons/main/ts/*"],
-      "santrix/plugins/fullscreen/*": ["modules/santrix/src/plugins/fullscreen/main/ts/*"],
-      "santrix/plugins/help/*": ["modules/santrix/src/plugins/help/main/ts/*"],
-      "santrix/plugins/image/*": ["modules/santrix/src/plugins/image/main/ts/*"],
-      "santrix/plugins/importcss/*": ["modules/santrix/src/plugins/importcss/main/ts/*"],
-      "santrix/plugins/insertdatetime/*": ["modules/santrix/src/plugins/insertdatetime/main/ts/*"],
-      "santrix/plugins/link/*": ["modules/santrix/src/plugins/link/main/ts/*"],
-      "santrix/plugins/lists/*": ["modules/santrix/src/plugins/lists/main/ts/*"],
-      "santrix/plugins/media/*": ["modules/santrix/src/plugins/media/main/ts/*"],
-      "santrix/plugins/nonbreaking/*": ["modules/santrix/src/plugins/nonbreaking/main/ts/*"],
-      "santrix/plugins/noneditable/*": ["modules/santrix/src/plugins/noneditable/main/ts/*"],
-      "santrix/plugins/pagebreak/*": ["modules/santrix/src/plugins/pagebreak/main/ts/*"],
-      "santrix/plugins/preview/*": ["modules/santrix/src/plugins/preview/main/ts/*"],
-      "santrix/plugins/quickbars/*": ["modules/santrix/src/plugins/quickbars/main/ts/*"],
-      "santrix/plugins/save/*": ["modules/santrix/src/plugins/save/main/ts/*"],
-      "santrix/plugins/searchreplace/*": ["modules/santrix/src/plugins/searchreplace/main/ts/*"],
-      "santrix/plugins/table/*": ["modules/santrix/src/plugins/table/main/ts/*"],
-      "santrix/plugins/template/*": ["modules/santrix/src/plugins/template/main/ts/*"],
-      "santrix/plugins/visualblocks/*": ["modules/santrix/src/plugins/visualblocks/main/ts/*"],
-      "santrix/plugins/visualchars/*": ["modules/santrix/src/plugins/visualchars/main/ts/*"],
-      "santrix/plugins/wordcount/*": ["modules/santrix/src/plugins/wordcount/main/ts/*"],
-
-      "@ephox/wrap-mcagar": ["modules/santrix/src/core/test/ts/module/McAgar"],
-
-      "@ephox/oxide-icons-default": ["modules/oxide-icons-default/dist/js/Main.d.js"],
-
-      "ephox/acid/test/*": ["modules/acid/src/test/ts/module/ephox/acid/test/*"],
-      "ephox/acid/demo/*": ["modules/acid/src/demo/ts/ephox/acid/demo/*"],
-      "ephox/acid/*": ["modules/acid/src/main/ts/ephox/acid/*"],
-      "ephox/agar/test/*": ["modules/agar/src/test/ts/module/ephox/agar/test/*"],
-      "ephox/agar/demo/*": ["modules/agar/src/demo/ts/ephox/agar/demo/*"],
-      "ephox/agar/*": ["modules/agar/src/main/ts/ephox/agar/*"],
-      "ephox/alloy/test/*": ["modules/alloy/src/test/ts/module/ephox/alloy/test/*"],
-      "ephox/alloy/demo/*": ["modules/alloy/src/demo/ts/ephox/alloy/demo/*"],
-      "ephox/alloy/*": ["modules/alloy/src/main/ts/ephox/alloy/*"],
-      "ephox/boss/test/*": ["modules/boss/src/test/ts/module/ephox/boss/test/*"],
-      "ephox/boss/demo/*": ["modules/boss/src/demo/ts/ephox/boss/demo/*"],
-      "ephox/boss/*": ["modules/boss/src/main/ts/ephox/boss/*"],
-      "ephox/boulder/test/*": ["modules/boulder/src/test/ts/module/ephox/boulder/test/*"],
-      "ephox/boulder/demo/*": ["modules/boulder/src/demo/ts/ephox/boulder/demo/*"],
-      "ephox/boulder/*": ["modules/boulder/src/main/ts/ephox/boulder/*"],
-      "ephox/bridge/test/*": ["modules/bridge/src/test/ts/module/ephox/bridge/test/*"],
-      "ephox/bridge/demo/*": ["modules/bridge/src/demo/ts/ephox/bridge/demo/*"],
-      "ephox/bridge/*": ["modules/bridge/src/main/ts/ephox/bridge/*"],
-      "ephox/darwin/test/*": ["modules/darwin/src/test/ts/module/ephox/darwin/test/*"],
-      "ephox/darwin/demo/*": ["modules/darwin/src/demo/ts/ephox/darwin/demo/*"],
-      "ephox/darwin/*": ["modules/darwin/src/main/ts/ephox/darwin/*"],
-      "ephox/dragster/test/*": ["modules/dragster/src/test/ts/module/ephox/dragster/test/*"],
-      "ephox/dragster/demo/*": ["modules/dragster/src/demo/ts/ephox/dragster/demo/*"],
-      "ephox/dragster/*": ["modules/dragster/src/main/ts/ephox/dragster/*"],
-      "ephox/jax/test/*": ["modules/jax/src/test/ts/module/ephox/jax/test/*"],
-      "ephox/jax/demo/*": ["modules/jax/src/demo/ts/ephox/jax/demo/*"],
-      "ephox/jax/*": ["modules/jax/src/main/ts/ephox/jax/*"],
-      "ephox/katamari/test/*": ["modules/katamari/src/test/ts/module/ephox/katamari/test/*"],
-      "ephox/katamari/demo/*": ["modules/katamari/src/demo/ts/ephox/katamari/demo/*"],
-      "ephox/katamari/*": ["modules/katamari/src/main/ts/ephox/katamari/*"],
-      "ephox/katamari-assertions/test/*": ["modules/katamari-assertions/src/test/ts/module/ephox/katamari-assertions/test/*"],
-      "ephox/katamari-assertions/demo/*": ["modules/katamari-assertions/src/demo/ts/ephox/katamari-assertions/demo/*"],
-      "ephox/katamari-assertions/*": ["modules/katamari-assertions/src/main/ts/ephox/katamari-assertions/*"],
-      "ephox/mcagar/test/*": ["modules/mcagar/src/test/ts/module/ephox/mcagar/test/*"],
-      "ephox/mcagar/demo/*": ["modules/mcagar/src/demo/ts/ephox/mcagar/demo/*"],
-      "ephox/mcagar/*": ["modules/mcagar/src/main/ts/ephox/mcagar/*"],
-      "ephox/phoenix/test/*": ["modules/phoenix/src/test/ts/module/ephox/phoenix/test/*"],
-      "ephox/phoenix/demo/*": ["modules/phoenix/src/demo/ts/ephox/phoenix/demo/*"],
-      "ephox/phoenix/*": ["modules/phoenix/src/main/ts/ephox/phoenix/*"],
-      "ephox/polaris/test/*": ["modules/polaris/src/test/ts/module/ephox/polaris/test/*"],
-      "ephox/polaris/demo/*": ["modules/polaris/src/demo/ts/ephox/polaris/demo/*"],
-      "ephox/polaris/*": ["modules/polaris/src/main/ts/ephox/polaris/*"],
-      "ephox/porkbun/test/*": ["modules/porkbun/src/test/ts/module/ephox/porkbun/test/*"],
-      "ephox/porkbun/demo/*": ["modules/porkbun/src/demo/ts/ephox/porkbun/demo/*"],
-      "ephox/porkbun/*": ["modules/porkbun/src/main/ts/ephox/porkbun/*"],
-      "ephox/robin/test/*": ["modules/robin/src/test/ts/module/ephox/robin/test/*"],
-      "ephox/robin/demo/*": ["modules/robin/src/demo/ts/ephox/robin/demo/*"],
-      "ephox/robin/*": ["modules/robin/src/main/ts/ephox/robin/*"],
-      "ephox/sand/test/*": ["modules/sand/src/test/ts/module/ephox/sand/test/*"],
-      "ephox/sand/demo/*": ["modules/sand/src/demo/ts/ephox/sand/demo/*"],
-      "ephox/sand/*": ["modules/sand/src/main/ts/ephox/sand/*"],
-      "ephox/snooker/test/*": ["modules/snooker/src/test/ts/module/ephox/snooker/test/*"],
-      "ephox/snooker/demo/*": ["modules/snooker/src/demo/ts/ephox/snooker/demo/*"],
-      "ephox/snooker/*": ["modules/snooker/src/main/ts/ephox/snooker/*"],
-      "ephox/sugar/test/*": ["modules/sugar/src/test/ts/module/ephox/sugar/test/*"],
-      "ephox/sugar/demo/*": ["modules/sugar/src/demo/ts/ephox/sugar/demo/*"],
-      "ephox/sugar/*": ["modules/sugar/src/main/ts/ephox/sugar/*"],
-      "ephox/santrix/test/*": ["modules/santrix/src/test/ts/module/ephox/santrix/test/*"],
-      "ephox/santrix/demo/*": ["modules/santrix/src/demo/ts/ephox/santrix/demo/*"],
-      "ephox/santrix/*": ["modules/santrix/src/main/ts/ephox/santrix/*"],
+      "santrix": [
+        "modules/santrix/src/core/main/ts/api/Main"
+      ],
+      "santrix/core/*": [
+        "modules/santrix/src/core/main/ts/*"
+      ],
+      "santrix/themes/silver/resources/*": [
+        "modules/santrix/src/themes/silver/main/resources/*"
+      ],
+      "santrix/themes/silver/demo/*": [
+        "modules/santrix/src/themes/silver/demo/ts/*"
+      ],
+      "santrix/themes/silver/*": [
+        "modules/santrix/src/themes/silver/main/ts/*"
+      ],
+      "santrix/models/dom/demo/*": [
+        "modules/santrix/src/models/dom/demo/ts/*"
+      ],
+      "santrix/models/dom/*": [
+        "modules/santrix/src/models/dom/main/ts/*"
+      ],
+      "santrix/plugins/advlist/*": [
+        "modules/santrix/src/plugins/advlist/main/ts/*"
+      ],
+      "santrix/plugins/accordion/*": [
+        "modules/santrix/src/plugins/accordion/main/ts/*"
+      ],
+      "santrix/plugins/anchor/*": [
+        "modules/santrix/src/plugins/anchor/main/ts/*"
+      ],
+      "santrix/plugins/autolink/*": [
+        "modules/santrix/src/plugins/autolink/main/ts/*"
+      ],
+      "santrix/plugins/autoresize/*": [
+        "modules/santrix/src/plugins/autoresize/main/ts/*"
+      ],
+      "santrix/plugins/autosave/*": [
+        "modules/santrix/src/plugins/autosave/main/ts/*"
+      ],
+      "santrix/plugins/charmap/*": [
+        "modules/santrix/src/plugins/charmap/main/ts/*"
+      ],
+      "santrix/plugins/code/*": [
+        "modules/santrix/src/plugins/code/main/ts/*"
+      ],
+      "santrix/plugins/codesample/*": [
+        "modules/santrix/src/plugins/codesample/main/ts/*"
+      ],
+      "santrix/plugins/directionality/*": [
+        "modules/santrix/src/plugins/directionality/main/ts/*"
+      ],
+      "santrix/plugins/emoticons/*": [
+        "modules/santrix/src/plugins/emoticons/main/ts/*"
+      ],
+      "santrix/plugins/fullscreen/*": [
+        "modules/santrix/src/plugins/fullscreen/main/ts/*"
+      ],
+      "santrix/plugins/help/*": [
+        "modules/santrix/src/plugins/help/main/ts/*"
+      ],
+      "santrix/plugins/image/*": [
+        "modules/santrix/src/plugins/image/main/ts/*"
+      ],
+      "santrix/plugins/importcss/*": [
+        "modules/santrix/src/plugins/importcss/main/ts/*"
+      ],
+      "santrix/plugins/insertdatetime/*": [
+        "modules/santrix/src/plugins/insertdatetime/main/ts/*"
+      ],
+      "santrix/plugins/link/*": [
+        "modules/santrix/src/plugins/link/main/ts/*"
+      ],
+      "santrix/plugins/lists/*": [
+        "modules/santrix/src/plugins/lists/main/ts/*"
+      ],
+      "santrix/plugins/media/*": [
+        "modules/santrix/src/plugins/media/main/ts/*"
+      ],
+      "santrix/plugins/nonbreaking/*": [
+        "modules/santrix/src/plugins/nonbreaking/main/ts/*"
+      ],
+      "santrix/plugins/noneditable/*": [
+        "modules/santrix/src/plugins/noneditable/main/ts/*"
+      ],
+      "santrix/plugins/pagebreak/*": [
+        "modules/santrix/src/plugins/pagebreak/main/ts/*"
+      ],
+      "santrix/plugins/preview/*": [
+        "modules/santrix/src/plugins/preview/main/ts/*"
+      ],
+      "santrix/plugins/quickbars/*": [
+        "modules/santrix/src/plugins/quickbars/main/ts/*"
+      ],
+      "santrix/plugins/save/*": [
+        "modules/santrix/src/plugins/save/main/ts/*"
+      ],
+      "santrix/plugins/searchreplace/*": [
+        "modules/santrix/src/plugins/searchreplace/main/ts/*"
+      ],
+      "santrix/plugins/table/*": [
+        "modules/santrix/src/plugins/table/main/ts/*"
+      ],
+      "santrix/plugins/template/*": [
+        "modules/santrix/src/plugins/template/main/ts/*"
+      ],
+      "santrix/plugins/visualblocks/*": [
+        "modules/santrix/src/plugins/visualblocks/main/ts/*"
+      ],
+      "santrix/plugins/visualchars/*": [
+        "modules/santrix/src/plugins/visualchars/main/ts/*"
+      ],
+      "santrix/plugins/wordcount/*": [
+        "modules/santrix/src/plugins/wordcount/main/ts/*"
+      ],
+      "@ephox/wrap-mcagar": [
+        "modules/santrix/src/core/test/ts/module/McAgar"
+      ],
+      "@santrix/oxide-icons-default": [
+        "modules/oxide-icons-default/dist/js/Main.d.js"
+      ],
+      "ephox/acid/test/*": [
+        "modules/acid/src/test/ts/module/ephox/acid/test/*"
+      ],
+      "ephox/acid/demo/*": [
+        "modules/acid/src/demo/ts/ephox/acid/demo/*"
+      ],
+      "ephox/acid/*": [
+        "modules/acid/src/main/ts/ephox/acid/*"
+      ],
+      "ephox/agar/test/*": [
+        "modules/agar/src/test/ts/module/ephox/agar/test/*"
+      ],
+      "ephox/agar/demo/*": [
+        "modules/agar/src/demo/ts/ephox/agar/demo/*"
+      ],
+      "ephox/agar/*": [
+        "modules/agar/src/main/ts/ephox/agar/*"
+      ],
+      "ephox/alloy/test/*": [
+        "modules/alloy/src/test/ts/module/ephox/alloy/test/*"
+      ],
+      "ephox/alloy/demo/*": [
+        "modules/alloy/src/demo/ts/ephox/alloy/demo/*"
+      ],
+      "ephox/alloy/*": [
+        "modules/alloy/src/main/ts/ephox/alloy/*"
+      ],
+      "ephox/boss/test/*": [
+        "modules/boss/src/test/ts/module/ephox/boss/test/*"
+      ],
+      "ephox/boss/demo/*": [
+        "modules/boss/src/demo/ts/ephox/boss/demo/*"
+      ],
+      "ephox/boss/*": [
+        "modules/boss/src/main/ts/ephox/boss/*"
+      ],
+      "ephox/boulder/test/*": [
+        "modules/boulder/src/test/ts/module/ephox/boulder/test/*"
+      ],
+      "ephox/boulder/demo/*": [
+        "modules/boulder/src/demo/ts/ephox/boulder/demo/*"
+      ],
+      "ephox/boulder/*": [
+        "modules/boulder/src/main/ts/ephox/boulder/*"
+      ],
+      "ephox/bridge/test/*": [
+        "modules/bridge/src/test/ts/module/ephox/bridge/test/*"
+      ],
+      "ephox/bridge/demo/*": [
+        "modules/bridge/src/demo/ts/ephox/bridge/demo/*"
+      ],
+      "ephox/bridge/*": [
+        "modules/bridge/src/main/ts/ephox/bridge/*"
+      ],
+      "ephox/darwin/test/*": [
+        "modules/darwin/src/test/ts/module/ephox/darwin/test/*"
+      ],
+      "ephox/darwin/demo/*": [
+        "modules/darwin/src/demo/ts/ephox/darwin/demo/*"
+      ],
+      "ephox/darwin/*": [
+        "modules/darwin/src/main/ts/ephox/darwin/*"
+      ],
+      "ephox/dragster/test/*": [
+        "modules/dragster/src/test/ts/module/ephox/dragster/test/*"
+      ],
+      "ephox/dragster/demo/*": [
+        "modules/dragster/src/demo/ts/ephox/dragster/demo/*"
+      ],
+      "ephox/dragster/*": [
+        "modules/dragster/src/main/ts/ephox/dragster/*"
+      ],
+      "ephox/jax/test/*": [
+        "modules/jax/src/test/ts/module/ephox/jax/test/*"
+      ],
+      "ephox/jax/demo/*": [
+        "modules/jax/src/demo/ts/ephox/jax/demo/*"
+      ],
+      "ephox/jax/*": [
+        "modules/jax/src/main/ts/ephox/jax/*"
+      ],
+      "ephox/katamari/test/*": [
+        "modules/katamari/src/test/ts/module/ephox/katamari/test/*"
+      ],
+      "ephox/katamari/demo/*": [
+        "modules/katamari/src/demo/ts/ephox/katamari/demo/*"
+      ],
+      "ephox/katamari/*": [
+        "modules/katamari/src/main/ts/ephox/katamari/*"
+      ],
+      "ephox/katamari-assertions/test/*": [
+        "modules/katamari-assertions/src/test/ts/module/ephox/katamari-assertions/test/*"
+      ],
+      "ephox/katamari-assertions/demo/*": [
+        "modules/katamari-assertions/src/demo/ts/ephox/katamari-assertions/demo/*"
+      ],
+      "ephox/katamari-assertions/*": [
+        "modules/katamari-assertions/src/main/ts/ephox/katamari-assertions/*"
+      ],
+      "ephox/mcagar/test/*": [
+        "modules/mcagar/src/test/ts/module/ephox/mcagar/test/*"
+      ],
+      "ephox/mcagar/demo/*": [
+        "modules/mcagar/src/demo/ts/ephox/mcagar/demo/*"
+      ],
+      "ephox/mcagar/*": [
+        "modules/mcagar/src/main/ts/ephox/mcagar/*"
+      ],
+      "ephox/phoenix/test/*": [
+        "modules/phoenix/src/test/ts/module/ephox/phoenix/test/*"
+      ],
+      "ephox/phoenix/demo/*": [
+        "modules/phoenix/src/demo/ts/ephox/phoenix/demo/*"
+      ],
+      "ephox/phoenix/*": [
+        "modules/phoenix/src/main/ts/ephox/phoenix/*"
+      ],
+      "ephox/polaris/test/*": [
+        "modules/polaris/src/test/ts/module/ephox/polaris/test/*"
+      ],
+      "ephox/polaris/demo/*": [
+        "modules/polaris/src/demo/ts/ephox/polaris/demo/*"
+      ],
+      "ephox/polaris/*": [
+        "modules/polaris/src/main/ts/ephox/polaris/*"
+      ],
+      "ephox/porkbun/test/*": [
+        "modules/porkbun/src/test/ts/module/ephox/porkbun/test/*"
+      ],
+      "ephox/porkbun/demo/*": [
+        "modules/porkbun/src/demo/ts/ephox/porkbun/demo/*"
+      ],
+      "ephox/porkbun/*": [
+        "modules/porkbun/src/main/ts/ephox/porkbun/*"
+      ],
+      "ephox/robin/test/*": [
+        "modules/robin/src/test/ts/module/ephox/robin/test/*"
+      ],
+      "ephox/robin/demo/*": [
+        "modules/robin/src/demo/ts/ephox/robin/demo/*"
+      ],
+      "ephox/robin/*": [
+        "modules/robin/src/main/ts/ephox/robin/*"
+      ],
+      "ephox/sand/test/*": [
+        "modules/sand/src/test/ts/module/ephox/sand/test/*"
+      ],
+      "ephox/sand/demo/*": [
+        "modules/sand/src/demo/ts/ephox/sand/demo/*"
+      ],
+      "ephox/sand/*": [
+        "modules/sand/src/main/ts/ephox/sand/*"
+      ],
+      "ephox/snooker/test/*": [
+        "modules/snooker/src/test/ts/module/ephox/snooker/test/*"
+      ],
+      "ephox/snooker/demo/*": [
+        "modules/snooker/src/demo/ts/ephox/snooker/demo/*"
+      ],
+      "ephox/snooker/*": [
+        "modules/snooker/src/main/ts/ephox/snooker/*"
+      ],
+      "ephox/sugar/test/*": [
+        "modules/sugar/src/test/ts/module/ephox/sugar/test/*"
+      ],
+      "ephox/sugar/demo/*": [
+        "modules/sugar/src/demo/ts/ephox/sugar/demo/*"
+      ],
+      "ephox/sugar/*": [
+        "modules/sugar/src/main/ts/ephox/sugar/*"
+      ],
+      "ephox/santrix/test/*": [
+        "modules/santrix/src/test/ts/module/ephox/santrix/test/*"
+      ],
+      "ephox/santrix/demo/*": [
+        "modules/santrix/src/demo/ts/ephox/santrix/demo/*"
+      ],
+      "ephox/santrix/*": [
+        "modules/santrix/src/main/ts/ephox/santrix/*"
+      ],
     }
   }
 }

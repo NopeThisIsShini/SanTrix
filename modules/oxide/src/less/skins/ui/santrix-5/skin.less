@@ -26,7 +26,7 @@
 @toolbar-button-spacing-x: 0;
 @toolbar-button-spacing-y: 2px;
 @toolbar-button-hover-background-color: multiply(white, contrast(@background-color, fade(@color-black, 15), fade(@color-black, 85)));
-@toolbar-button-enabled-background-color:  multiply(white, contrast(@background-color, fade(@color-black, 25), fade(@color-black, 65)));
+@toolbar-button-enabled-background-color: multiply(white, contrast(@background-color, fade(@color-black, 25), fade(@color-black, 65)));
 @toolbar-group-separator-color: @border-color;
 @toolbar-background: url("data:image/svg+xml;charset=utf8,%3Csvg height='@{_toolbar-height}' viewBox='0 0 40 @{_toolbar-height}' width='40' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0' y='@{_toolbar-divider-height}' width='100' height='1' fill='@{_toolbar-row-separator-color}'/%3E%3C/svg%3E") left 0 top @toolbar-padding-y @toolbar-background-color;
 @_toolbar-row-separator-color: escape('@{toolbar-row-separator-color}');
@@ -44,9 +44,9 @@
 @color-tint: #207ab7;
 @panel-border-radius: 3px;
 @control-border-radius: 3px;
-@tinymce-border-radius: 0;
-@tinymce-border-width: 1px;
-@tinymce-box-shadow: none;
+@santrix-border-radius: 0;
+@santrix-border-width: 1px;
+@santrix-box-shadow: none;
 @textfield-focus-box-shadow: none;
 @textfield-focus-outline: 2px solid fade(@color-tint, 25%);
 @menubar-padding-x: @toolbar-group-padding-x;
@@ -149,7 +149,9 @@
   }
 
   // Context toolbar
-  .tox-pop .tox-pop__dialog .tox-toolbar { padding: 0; }
+  .tox-pop .tox-pop__dialog .tox-toolbar {
+    padding: 0;
+  }
 
   // Add a top border when toolbar_location is bottom
   &:not(.tox-santrix-inline) .tox-editor-header:not(:first-child) .tox-menubar {

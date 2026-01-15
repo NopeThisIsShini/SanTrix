@@ -21,12 +21,12 @@ const autoprefix = new lessAutoprefix({
 //
 // Lint less files using stylelint
 //
-gulp.task('lint', function() {
+gulp.task('lint', function () {
   return gulp.src('./src/less/**/*.less')
     .pipe(gulpStylelint({
       failAfterError: true,
       reporters: [
-        {formatter: 'string', console: true}
+        { formatter: 'string', console: true }
       ]
     }));
 });
@@ -35,7 +35,7 @@ gulp.task('lint', function() {
 //
 // Build HTML demos
 //
-gulp.task('buildDemos', function() {
+gulp.task('buildDemos', function () {
   return gulp.src(['./src/demo/**/*'])
     .pipe(gulp.dest('./build'));
 });
@@ -44,11 +44,11 @@ gulp.task('buildDemos', function() {
 // Copy SanTrix from modules/santrix to the build folder.
 // NOTE. This task must be run after the buildDemos task
 //
-gulp.task('copySantrix', function(done) {
+gulp.task('copySantrix', function (done) {
   if (fs.existsSync('../santrix/js/santrix/santrix.min.js')) {
     return gulp.src(['../santrix/js/santrix/**/*'], {
-        base: '../santrix/js/'
-      })
+      base: '../santrix/js/'
+    })
       .pipe(gulp.dest('./build'));
   } else {
     console.log(chalk.red('Local SanTrix does not exist. Using CDN version instead'));
@@ -75,7 +75,7 @@ gulp.task('buildSkinSwitcher', (done) => {
 //
 // Build CSS
 //
-gulp.task('less', function() {
+gulp.task('less', function () {
   return gulp.src('./src/less/skins/**/*.less')
     .pipe(less({
       math: 'always',
@@ -88,7 +88,7 @@ gulp.task('less', function() {
 //
 // Minify CSS
 //
-gulp.task('minifyCss', function() {
+gulp.task('minifyCss', function () {
   return gulp.src(['./build/skins/**/*.css', '!**/*.min.css'])
     .pipe(sourcemaps.init())
     .pipe(cleanCSS({ rebase: false }))
@@ -101,11 +101,11 @@ gulp.task('minifyCss', function() {
 //
 // Generate JS
 //
-gulp.task('generateJs', function() {
+gulp.task('generateJs', function () {
   return gulp.src(['./build/skins/**/*.css', '!**/*.min.css'])
     .pipe(sourcemaps.init())
     .pipe(cleanCSS({ rebase: false }))
-    .pipe(through2.obj(function(file, _, cb) {
+    .pipe(through2.obj(function (file, _, cb) {
       if (file.isBuffer()) {
         const contents = `santrix.Resource.add('${file.relative}', ${JSON.stringify(file.contents.toString())})`;
         file.contents = Buffer.from(contents)
@@ -141,7 +141,7 @@ gulp.task('clean', function () {
     read: false,
     allowEmpty: true
   })
-  .pipe(clean());
+    .pipe(clean());
 });
 
 //
