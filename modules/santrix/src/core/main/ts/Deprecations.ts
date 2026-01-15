@@ -72,8 +72,8 @@ const logRemovedWarnings = (rawOptions: RawEditorOptions, normalizedOptions: Nor
     const optionsMessage = hasRemovedOptions ? `\n\nOptions:${listJoiner}${removedOptions.join(listJoiner)}` : '';
     // eslint-disable-next-line no-console
     console.warn(
-      'The following deprecated features are currently enabled but have been removed in TinyMCE 6.0 and therefore, they are not present in SanTrix either. These features will no longer work and should be removed from the SanTrix configuration. ' +
-      'See https://www.santrix.org/docs/santrix/1/migration-from-5x/ for more information.' +
+      'The following deprecated features are currently enabled but have been removed from SanTrix and will no longer work. Please update your SanTrix configuration. ' +
+      'See https://www.santrix.org/docs/santrix/1/migration-guide/ for more information.' +
       themesMessage +
       pluginsMessage +
       optionsMessage
