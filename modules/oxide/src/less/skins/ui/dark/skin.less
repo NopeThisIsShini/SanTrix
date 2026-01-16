@@ -1,33 +1,25 @@
-@import '../../../theme/theme';
+@import 'src/less/theme/theme';
+@import 'src/less/theme/minimal-shared';
 
-//
-// Place your variables here
-//
+// Dark Mode Specific Colors
+@background-color: #1a1a1a;        // Deep charcoal background
+@color-tint: #ffffff;             // White highlights
+@border-color: #333333;           // Subtle dark borders
+@toolbar-button-icon-color: #cccccc; // Muted icons
 
-@background-color: #222F3E;
-@santrix-separator-color: rgba(255, 255, 255, .15);
-@tooltip-background-color: #324053;
+// Dark Mode Toggles/Hovers
+@toolbar-button-hover-background-color: #2a2a2a;
+@toolbar-button-enabled-background-color: #333333;
+@toolbar-button-active-background-color: #3d3d3d;
 
-@keyboard-focus-outline-color: @color-white;
+@collection-list-item-active-background-color: #2a2a2a;
+@collection-list-item-label-active-text-color: #ffffff;
 
-@editor-header-border: 1px solid @santrix-separator-color;
-@editor-header-box-shadow: none;
-@editor-header-sticky-box-shadow: @editor-header-box-shadow;
-@editor-bottom-header-box-shadow: @editor-header-box-shadow;
-@editor-bottom-header-sticky-box-shadow: @editor-header-box-shadow;
+@toolbar-button-bespoke-background-color: #222222;
 
-@menu-border-color: @santrix-separator-color;
-@menu-box-shadow: none;
-
-@insert-table-picker-border-color: @santrix-separator-color;
-
-@dialog-body-link-color: lighten(@color-tint, 25%);
-@dialog-body-link-hover-color: lighten(@dialog-body-link-color, 20%);
-@dialog-body-link-active-color: lighten(@dialog-body-link-color, 30%);
-@dialog-body-link-focus-outline-color: @dialog-body-link-color;
-
-.tox.tox-santrix-aux .tox-toolbar__overflow {
-  box-shadow: 0 0 0 1px @santrix-separator-color;
+// Dark Mode specific overrides
+.tox {
+  .tox-toolbar__group {
+    border-color: rgba(255, 255, 255, .05) !important;
+  }
 }
-
-@edit-area-border-color: #FFFFFF;
