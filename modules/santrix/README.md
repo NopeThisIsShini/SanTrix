@@ -24,7 +24,7 @@ Create an `index.html` file and paste this:
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SanTrix Editor</title>
-  <script src="https://unpkg.com/santrix/js/santrix/santrix.min.js"></script>
+  <script src="https://unpkg.com/santrix/santrix.min.js"></script>
 </head>
 <body>
   <textarea id="editor">Hello World! Start typing here...</textarea>
