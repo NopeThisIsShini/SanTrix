@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.0.0 - 2026-01-20
+
+### 🎉 First Stable Release
+
+This is the first stable, production-ready release of SanTrix!
+
+### Changed
+
+- Promoted from alpha/pre-release to stable version
+- Package now publishes with the correct module-specific README (not the monorepo README)
+- All APIs are now stable and ready for production use
+- Package structure matches HugeRTE/TinyMCE flat distribution
+- Zero runtime dependencies (all dependencies are bundled)
+
+### NOTE
+
+- SanTrix is a fully MIT-licensed fork of TinyMCE 6
+- Compatible with TinyMCE 6.x plugins and configurations
+
 ## 0.2.0-alpha - 2026-01-19
 
 ### Changed

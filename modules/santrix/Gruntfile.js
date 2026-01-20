@@ -60,7 +60,7 @@ module.exports = function (grunt) {
     },
 
     eslint: {
-      target: [ 'src/**/*.ts' ]
+      target: ['src/**/*.ts']
     },
 
     globals: {
@@ -89,7 +89,7 @@ module.exports = function (grunt) {
               swag.remapImports()
             ]
           },
-          files:[
+          files: [
             {
               src: 'lib/core/main/ts/api/Main.js',
               dest: 'js/santrix/santrix.js'
@@ -110,7 +110,7 @@ module.exports = function (grunt) {
               FilesAsStrings,
               swag.dts({
                 respectExternal: true,
-                keepVariables: [ 'santrix' ],
+                keepVariables: ['santrix'],
                 keepComments: false
               })
             ]
@@ -146,7 +146,7 @@ module.exports = function (grunt) {
               swag.remapImports()
             ]
           },
-          files:[ { src: `lib/plugins/${name}/main/ts/Main.js`, dest: `js/santrix/plugins/${name}/plugin.js` } ]
+          files: [{ src: `lib/plugins/${name}/main/ts/Main.js`, dest: `js/santrix/plugins/${name}/plugin.js` }]
         };
       }),
       gruntUtils.generate(themes, 'theme', (name) => {
@@ -173,7 +173,7 @@ module.exports = function (grunt) {
               swag.remapImports()
             ]
           },
-          files:[
+          files: [
             {
               src: `lib/themes/${name}/main/ts/Main.js`,
               dest: `js/santrix/themes/${name}/theme.js`
@@ -204,7 +204,7 @@ module.exports = function (grunt) {
               swag.remapImports()
             ]
           },
-          files:[
+          files: [
             {
               src: `lib/models/${name}/main/ts/Main.js`,
               dest: `js/santrix/models/${name}/model.js`
@@ -269,12 +269,12 @@ module.exports = function (grunt) {
       }),
       gruntUtils.generate(themes, 'theme', (name) => {
         return {
-          files: [ { src: `js/santrix/themes/${name}/theme.js`, dest: `js/santrix/themes/${name}/theme.min.js` } ]
+          files: [{ src: `js/santrix/themes/${name}/theme.js`, dest: `js/santrix/themes/${name}/theme.min.js` }]
         };
       }),
       gruntUtils.generate(models, 'model', (name) => {
         return {
-          files: [ { src: `js/santrix/models/${name}/model.js`, dest: `js/santrix/models/${name}/model.min.js` } ]
+          files: [{ src: `js/santrix/models/${name}/model.js`, dest: `js/santrix/models/${name}/model.min.js` }]
         };
       })
     ),
@@ -301,22 +301,22 @@ module.exports = function (grunt) {
     },
 
     concat: Object.assign({
-        options: {
-          process: function(content) {
-            return content.
-              replace(/@@version@@/g, packageData.version).
-              replace(/@@releaseDate@@/g, packageData.date);
-          }
-        },
-        core: {
-          src: [
-            'src/core/text/build-header.js',
-            'src/core/text/dompurify-license-header.js',
-            'js/santrix/santrix.js'
-          ],
-          dest: 'js/santrix/santrix.js'
+      options: {
+        process: function (content) {
+          return content.
+            replace(/@@version@@/g, packageData.version).
+            replace(/@@releaseDate@@/g, packageData.date);
         }
       },
+      core: {
+        src: [
+          'src/core/text/build-header.js',
+          'src/core/text/dompurify-license-header.js',
+          'js/santrix/santrix.js'
+        ],
+        dest: 'js/santrix/santrix.js'
+      }
+    },
       gruntUtils.generate(plugins, 'plugin', function (name) {
         return {
           src: [
@@ -376,7 +376,7 @@ module.exports = function (grunt) {
             dest: 'js/santrix/license.txt'
           },
           {
-            src: '../../README.md',
+            src: 'README.md',
             dest: 'js/santrix/README.md'
           }
         ]
@@ -633,7 +633,7 @@ module.exports = function (grunt) {
               'description': 'Web based JavaScript HTML WYSIWYG editor control.',
               'license': 'MIT',
               'keywords': keywords,
-              'homepage': 'https:/santrix.org/',
+              'homepage': 'https://nopethisisshini.github.io/SanTrix.dev/',
               'ignore': ['README.md', 'composer.json', 'package.json', '.npmignore', 'CHANGELOG.md']
             }));
 
@@ -645,17 +645,17 @@ module.exports = function (grunt) {
                 'url': 'https://github.com/NopeThisIsShini/SanTrix.git',
                 'directory': 'modules/santrix'
               },
-              'funding': {
-                'type': 'opencollective',
-                'url': 'https://opencollective.com/santrix'
-              },
+              // 'funding': {
+              //   'type': 'opencollective',
+              //   'url': 'https://opencollective.com/santrix'
+              // },
               'description': 'Web based JavaScript HTML WYSIWYG editor control.',
               'author': 'SanTrix Team',
               'main': 'santrix.js',
               'types': 'santrix.d.ts',
               'license': 'MIT',
               'keywords': keywords,
-              'homepage': 'https://santrix.org/',
+              'homepage': 'https://nopethisisshini.github.io/SanTrix.dev/',
               'bugs': { 'url': 'https://github.com/NopeThisIsShini/SanTrix/issues' }
             }));
 
@@ -665,14 +665,14 @@ module.exports = function (grunt) {
               'description': 'Web based JavaScript HTML WYSIWYG editor control.',
               'license': ['MIT'],
               'keywords': keywords,
-              'homepage': 'https://santrix.org/',
+              'homepage': 'https://nopethisisshini.github.io/SanTrix.dev/',
               'type': 'component',
-              'funding': [
-                {
-                  'type': 'opencollective',
-                  'url': 'https://opencollective.com/santrix'
-                }
-              ],
+              // 'funding': [
+              //   {
+              //     'type': 'opencollective',
+              //     'url': 'https://opencollective.com/santrix'
+              //   }
+              // ],
               'extra': {
                 'component': {
                   'scripts': [
@@ -752,11 +752,11 @@ module.exports = function (grunt) {
           owners: 'SanTrix Team',
           summary: 'SanTrix rich text editor',
           description: 'The SanTrix rich text editor forked from the latest MIT-licensed version of the TinyMCE editor. ' +
-          'SanTrix has the ability to convert HTML TEXTAREA fields or other HTML elements to editor instances. SanTrix is very easy to integrate ' +
-          'into other Content Management Systems.',
+            'SanTrix has the ability to convert HTML TEXTAREA fields or other HTML elements to editor instances. SanTrix is very easy to integrate ' +
+            'into other Content Management Systems.',
           releaseNotes: 'Release notes for my package.',
           summary: 'SanTrix is a platform independent web based Javascript HTML WYSIWYG editor ' +
-          'control released as Open Source under MIT.',
+            'control released as Open Source under MIT.',
           projectUrl: 'https://santrix.org/',
           //iconUrl: 'https://www.tiny.cloud/favicon-32x32.png',
           licenseUrl: 'https://github.com/NopeThisIsShini/SanTrix/blob/main/LICENSE.TXT',
